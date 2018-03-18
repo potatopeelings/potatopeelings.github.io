@@ -32,9 +32,7 @@ A group in a Word document creates the following heirarchy of nodes in document.
 
 To position a shape in a group
 
-**Step 1**
-
-Use `wp:positionH` and `wp:positionV` to position the group.
+**Step 1** - Use `wp:positionH` and `wp:positionV` to position the group.
 
 _360000 emu_ = _1 cm_ from the edge of the margin is
 
@@ -46,9 +44,7 @@ _360000 emu_ = _1 cm_ from the edge of the margin is
 
 `relativeFrom="document"` makes it from the edge of the _document_.
 
-**Step 2**
-
-`wpg:grpSpPr/a:xfrm/a:chOff` reversed and scaled by `a:ext/a.chExt`, positions shapes within the group.
+**Step 2** - `wpg:grpSpPr/a:xfrm/a:chOff` reversed and scaled by `a:ext/a.chExt`, positions shapes within the group.
 
 _360000 emu * (100000 / 200000)_ = _0.5 cm_ from the top of the group is
 
@@ -58,9 +54,7 @@ _360000 emu * (100000 / 200000)_ = _0.5 cm_ from the top of the group is
 <a:chOff ... y="-360000"/>
 ```
 
-**Step 3**
-
-`wps:spPr/a:xfrm/a:off` scaled, _repositions_ a shape within the group.
+**Step 3** - `wps:spPr/a:xfrm/a:off` scaled, _repositions_ a shape within the group.
 
 _(100000 / 200000) * 360000 emu_ = _0.5 cm_ from the left of the group is
 
@@ -78,7 +72,7 @@ _(100000 / 200000) * 360000 emu_ = _0.5 cm_ from the left of the group is
       ...
 ```
 
-Both `wpg:grpSpPr/a:xfrm/a:chOff` and `wps:spPr/a:xfrm/a:off` position shapes.
+Both `wpg:grpSpPr/a:xfrm/a:chOff` and `wps:spPr/a:xfrm/a:off` change shape position.
 
 ## Related ##
 
