@@ -4,39 +4,41 @@ title: Open XML - Interpreting Group and Shape Positions in Word
 ---
 
 A group in a Word document creates the following heirarchy of nodes in document.xml.
-```
-  mc:AlternateContent
-    mc:Choice
-      w:drawing
-        wp:anchor
-          wp:positionH
-          wp:positionV
-          a:graphic
-            a:graphicData
-              wpg:wgp
+```xml
+<mc:AlternateContent ...>
+  <mc:Choice ...>
+    <w:drawing ...>
+      <wp:anchor ...>
+        <wp:positionH ...>
+        <wp:positionV ...>
+        <a:graphic ...>
+          <a:graphicData ...>
+            <wpg:wgp ...>
+              ...
+              <wpg:grpSpPr ...>
+                <a:xfrm ...>
+                  <a:off .../>
+                  <a:ext .../>
+                  <a:chOff .../>
+                  <a:chExt .../>
+              <wps:wsp ...>
                 ...
-                wpg:grpSpPr
-                  a:xfrm
-                    a:off
-                    a:ext
-                    a:chOff
-                    a:chExt
-                wps:wsp
-                  ...
-                  wps:spPr
-                    a:xfrm
-                      a:off
-                      a:ext
-                ...
+                <wps:spPr ...>
+                  <a:xfrm ...>
+                    <a:off .../>
+                    <a:ext .../>
+              ...
 ```
 
 To position a shape in a group
 
-**Step 1** - Use `wp:positionH` and `wp:positionV` to position the group.
+## Step 1
+
+Use `wp:positionH` and `wp:positionV` to position the group.
 
 _360000 emu_ = _1 cm_ from the edge of the margin is
 
-```
+```xml
 <wp:positionH relativeFrom="margin">
   <wp:posOffset>360000</wp:posOffset>
 </wp:positionH>
@@ -44,21 +46,25 @@ _360000 emu_ = _1 cm_ from the edge of the margin is
 
 `relativeFrom="document"` makes it from the edge of the _document_.
 
-**Step 2** - `wpg:grpSpPr/a:xfrm/a:chOff` reversed and scaled by `a:ext/a.chExt`, positions shapes within the group.
+## Step 2
+
+`wpg:grpSpPr/a:xfrm/a:chOff` reversed and scaled by `a:ext/a.chExt`, positions shapes within the group.
 
 _360000 emu * (100000 / 200000)_ = _0.5 cm_ from the top of the group is
 
-```
+```xml
 <a:ext ... cy="100000"/>
 <a:chExt ... cy="200000"/>
 <a:chOff ... y="-360000"/>
 ```
 
-**Step 3** - `wps:spPr/a:xfrm/a:off` scaled, _repositions_ a shape within the group.
+## Step 3
+
+`wps:spPr/a:xfrm/a:off` scaled, _repositions_ a shape within the group.
 
 _(100000 / 200000) * 360000 emu_ = _0.5 cm_ from the left of the group is
 
-```
+```xml
 <wpg:grpSpPr>
   <a:xfrm>
     <a:ext cx="100000" ... />
