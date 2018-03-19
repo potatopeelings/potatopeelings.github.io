@@ -1,14 +1,18 @@
 
 pre.highlight {
-  background-color: #efefef;
+  background-color: rgba(10, 10, 10, 0.4);
   padding: 14px 14px 14px 20px;
-  border: 1px solid #ddd;
-  margin: 20px 0 20px 0;
+  margin: 20px 7px 20px 7px;
   overflow: auto;
+
+  > code {
+    color: #DDD;
+  }
 }
 
 code {
-  font-family:'Bitstream Vera Sans Mono','Courier', monospace;
+  font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+  color: #D7BA7D;
 }
 
 .highlight .c { color: #586E75 } /* Comment */
@@ -55,7 +59,7 @@ code {
 .highlight .nn { color: #93A1A1 } /* Name.Namespace */
 .highlight .nx { color: #555 } /* Name.Other */
 .highlight .py { color: #93A1A1 } /* Name.Property */
-.highlight .nt { color: #268BD2 } /* Name.Tag */
+.highlight .nt { color: rgb(200, 40, 41) } /* Name.Tag */
 .highlight .nv { color: #268BD2 } /* Name.Variable */
 .highlight .ow { color: #859900 } /* Operator.Word */
 .highlight .w { color: #93A1A1 } /* Text.Whitespace */
