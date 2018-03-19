@@ -118,6 +118,7 @@ img {
 .date {
   font-style: italic;
   color: $gray;
+  margin-top: 2em;
 }
 
 // Specify the color of the selection
@@ -151,8 +152,8 @@ img {
 //
 
 .wrapper-masthead {
-  background: rgba(223, 155, 165, 1);
-  color: #4f0b15;
+  background: rgba(0, 0, 0, 1);
+  color: #ccc;
   margin-bottom: 50px;
 }
 
@@ -244,6 +245,14 @@ nav {
 .posts > .post {
   padding-bottom: 2em;
   border-bottom: 1px solid $lightGray;
+
+  > h1 {
+    margin-top: 0;
+  }
+  
+  > .date {
+    margin-bottom: 1em;
+  }
 }
 
 .posts > .post:last-child {
