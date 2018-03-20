@@ -18,7 +18,7 @@ html {
 }
 
 body {
-	background: rgb(30, 30, 30);
+	background: #333;
   font: 14px/1.4 $font;
   color: #DDD;
 }
@@ -70,7 +70,7 @@ a {
   text-decoration: none;
 	cursor: pointer;
   &:hover, &:active {
-    color: #4080D0;
+    text-decoration: underline;
   }
 }
 
@@ -114,7 +114,7 @@ img {
 
 .date {
   font-style: italic;
-  color: $gray;
+  color: #999;
   margin-top: 2em;
 }
 
@@ -149,7 +149,7 @@ img {
 //
 
 .wrapper-masthead {
-  background: rgba(0, 0, 0, 1);
+  background: #000;
   color: #ccc;
   margin-bottom: 50px;
 }
@@ -279,9 +279,7 @@ nav {
 
 .wrapper-footer {
   margin-top: 50px;
-  border-top: 1px solid #ddd;
-  border-bottom: 1px solid #ddd;
-  background-color: $lightGray;
+  background-color: #000;
 }
 
 footer {
