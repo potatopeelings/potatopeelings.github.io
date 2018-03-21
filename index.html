@@ -2,18 +2,11 @@
 layout: default
 ---
 
-<div class="posts">
-  {% for post in site.posts %}
-    <article class="post">
-
-      <div class="date">On {{ post.date | date: "%B %e, %Y" }}</div>
-      <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
-
+<div class="categories">
+    <article class="category">
+      <h1><a href="{{ site.baseurl }}programming" class="read-more">Programming</a></h1>
       <div class="entry">
-        {{ post.excerpt }}
+        Posts about coding, design and architecture
       </div>
-
-      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
     </article>
-  {% endfor %}
 </div>
