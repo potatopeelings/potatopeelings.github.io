@@ -4,12 +4,11 @@
     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
     <meta name="theme-color" content="#333">
 
-    {% if page.excerpt %}
-    <meta name="description" content="{{ page.excerpt| strip_html }}" />
-    <meta property="og:description" content="{{ page.excerpt| strip_html }}" />
-    {% else %}
     <meta name="description" content="{{ site.description }}">
     <meta property="og:description" content="{{ site.description }}" />
+    {% capture tags_size %}{{ page.tags | size }}{% endcapture %}
+    {% if tags_size != '0' %}
+    <meta name="keywords" content="{{ page.tags | join: ', ' }}"/>
     {% endif %}
     <meta name="author" content="{{ site.name }}" />
 

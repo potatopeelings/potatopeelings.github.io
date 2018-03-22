@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Open XML - Interpreting Group and Shape Positions in Word
+tags: [ OpenXML ]
 ---
 
 A group in a Word document creates the following heirarchy of nodes in document.xml.

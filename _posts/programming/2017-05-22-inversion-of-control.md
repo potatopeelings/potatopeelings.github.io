@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Inversion of Control
+tags: [ design, IOC ]
 ---
 
 Inversion of Control (IoC) is a design *principle*.
