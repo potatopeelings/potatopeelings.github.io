@@ -18,9 +18,9 @@ html {
 }
 
 body {
-	background: #333;
+	background: #eee;
   font: 14px/1.4 $font;
-  color: #eee;
+  color: #333;
 }
 
 .container {
@@ -114,7 +114,7 @@ img {
 
 .date {
   font-style: italic;
-  color: #999;
+  color: #555;
   margin-top: 2em;
 }
 
@@ -241,7 +241,7 @@ nav {
 
 .posts > .post {
   padding-bottom: 2em;
-  border-bottom: 1px solid $lightGray;
+  border-bottom: 1px solid #999;
 
   > h1 {
     margin-top: 0;

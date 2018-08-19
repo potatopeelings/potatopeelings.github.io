@@ -92,8 +92,9 @@ defaults:
       layout: "post"
     values:
       category: "programming"
+  -
     scope:
-      path: "_posts/projectmanagement"
+      path: "_posts/project_management"
       layout: "post"
     values:
-      category: "projectmanagement"
+      category: "project management"
