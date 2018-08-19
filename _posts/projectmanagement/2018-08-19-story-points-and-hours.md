@@ -4,13 +4,13 @@ title: Story Points and Hours
 tags: [ scrum ]
 ---
 
-When doing Scrum, one question that comes up frequently is the relation between story points and hours. The short answer is - there is no direct relation. A good scrum implementation will use story points and estimate hours.
+When doing Scrum, one question that comes up frequently is the relation between story points and hours. The short answer is - there is no direct relation. A good scrum implementation will use story points _and_ estimate hours.
 
 ### What is a Story Point?
 
 Story points help size user stories relatively. A 3-point story is smaller than a 5-point story, a 5 is smaller than an 8, and so on.
 
-Unfortunately, when people have numbers, they do math. A lot of "Let's take out that 3 and that 5 and put in this 8." happens at Scrum planning. This is wrong. A story point is not a direct measure of effort - it is a mix of estimated effort, complexity and confidence in our estimates (see https://pm.stackexchange.com/a/2766 - what does a story point measure?).
+Unfortunately, when people have numbers, they do math. A lot of "Let's take out that 3 and that 5 and put in this 8." happens at Scrum planning. This is wrong. A story point is not a direct measure of effort - it is a mix of estimated effort, complexity and confidence in our estimates (see [What does a story point measure?](https://pm.stackexchange.com/a/2766)).
 
 This explains why story points are Fibonacci numbers (1, 3, 5…) or powers of 2 (1, 2, 4, 8…) - the larger a story is, the less confident we are on our estimated effort and complexity.
 
