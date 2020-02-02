@@ -35,4 +35,4 @@ var m = mm / 1000;
 var kg = gm / 1000;
 ```
 
-If you have to step into the function while debugging, your function boundary is mostly wrong
+If you have to step into the function while debugging, your function boundary is mostly wrong.

@@ -1,0 +1,4 @@
+- Different footer, header, home link for different categories (these are essentially different sites)
+- Add attribution - GitHub, Markdown, Jekyll, VSCode
+- Remove history
+- Add to Google indexing
